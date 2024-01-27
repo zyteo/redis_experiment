@@ -28,4 +28,18 @@ SADD moreNames link zelda
 SUNION names moreNames
 SISMEMBER names link
 SMEMBERS names peach
+
+lists
+LPUSH orders ryu
+LPUSH orders chun-li
+RPUSH orders blanka ken
+LPUSH orders sagat balrog
+LPOP orders 1
+RPOP orders 2
+LLEN orders
+LRANGE orders 0 1
+LRANGE orders 0 2
+LRANGE orders -2 -1
+LINDEX orders 1
+LPOS orders ryu
 ```
