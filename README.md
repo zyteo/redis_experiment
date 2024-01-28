@@ -42,4 +42,20 @@ LRANGE orders 0 2
 LRANGE orders -2 -1
 LINDEX orders 1
 LPOS orders ryu
+
+hashes
+HSET books:1 title "Name of the Wind"
+HSET books:1 author "Patrick Rothfuss"
+HSET books:1 rating 9
+HSET books:1 rating 10
+HSET books:2 title "Adventures of Tom Sawyer" author "Mark Twain" rating 8
+HGET books:1 title
+HGETALL books:2
+HEXISTS books:1 title
+HEXISTS books:1 abc
+HKEYS books:2
+HDEL books:1 author
+DEL books:1
+HVALS books:2
+
 ```
