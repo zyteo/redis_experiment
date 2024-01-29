@@ -58,4 +58,11 @@ HDEL books:1 author
 DEL books:1
 HVALS books:2
 
+sorted sets
+ZADD books 7 "the name of the wind" 2 "the final empire" 9 "the long earth"
+ZADD books 1 "the final empire"
+ZADD books NX 5 "the final empire"
+ZADD books NX 5 "the final empireS"
+ZRANGE books 0 -1
+DEL books
 ```
