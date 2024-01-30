@@ -65,4 +65,13 @@ ZADD books NX 5 "the final empire"
 ZADD books NX 5 "the final empireS"
 ZRANGE books 0 -1
 DEL books
+
+json
+JSON.SET authors:1 $ '{"name":"Patrick Rothfuss", "age":30, "books":[{"title":"The Name of the Wind", "rating":10}, {"title":"The Wise Man\'s Fear", "rating":9}]}'
+JSON.GET authors:1
+JSON.GET authors:1 $.name
+JSON.GET authors:1 $.books
+JSON.GET authors:1 $.books[0]
+JSON.GET authors:1 $.books[0].title
+JSON.SET authors:1 $.books[0].rating 8
 ```
